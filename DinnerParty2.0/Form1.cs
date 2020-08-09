@@ -16,5 +16,45 @@ namespace DinnerParty2._0
         {
             InitializeComponent();
         }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fancyBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void healthyBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void costLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tooLongLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
