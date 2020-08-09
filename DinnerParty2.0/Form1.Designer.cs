@@ -37,14 +37,14 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tooLongLabel = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.birthdayCost = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.fancyBirthday = new System.Windows.Forms.CheckBox();
             this.numberBirthday = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.birthdayCost = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.tooLongLabel = new System.Windows.Forms.Label();
-            this.cakeWriting = new System.Windows.Forms.Label();
+            this.cakeWriting = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -77,7 +77,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Dinner Party";
             this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // costLabel
             // 
@@ -86,7 +85,6 @@
             this.costLabel.Name = "costLabel";
             this.costLabel.Size = new System.Drawing.Size(66, 23);
             this.costLabel.TabIndex = 11;
-            this.costLabel.Click += new System.EventHandler(this.costLabel_Click);
             // 
             // cost
             // 
@@ -172,7 +170,46 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Birthday Party";
             this.tabPage2.UseVisualStyleBackColor = true;
-            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // tooLongLabel
+            // 
+            this.tooLongLabel.AutoSize = true;
+            this.tooLongLabel.BackColor = System.Drawing.Color.Red;
+            this.tooLongLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tooLongLabel.Location = new System.Drawing.Point(80, 108);
+            this.tooLongLabel.Name = "tooLongLabel";
+            this.tooLongLabel.Size = new System.Drawing.Size(61, 13);
+            this.tooLongLabel.TabIndex = 15;
+            this.tooLongLabel.Text = "Too Long";
+            this.tooLongLabel.Visible = false;
+            this.tooLongLabel.Click += new System.EventHandler(this.tooLongLabel_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(23, 156);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(32, 13);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Cost";
+            // 
+            // birthdayCost
+            // 
+            this.birthdayCost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.birthdayCost.Location = new System.Drawing.Point(62, 154);
+            this.birthdayCost.Name = "birthdayCost";
+            this.birthdayCost.Size = new System.Drawing.Size(50, 15);
+            this.birthdayCost.TabIndex = 13;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 108);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(68, 13);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Cake Writing";
             // 
             // fancyBirthday
             // 
@@ -185,6 +222,7 @@
             this.fancyBirthday.TabIndex = 11;
             this.fancyBirthday.Text = "Fancy Decorations";
             this.fancyBirthday.UseVisualStyleBackColor = true;
+            this.fancyBirthday.CheckedChanged += new System.EventHandler(this.fancyBirthday_CheckedChanged);
             // 
             // numberBirthday
             // 
@@ -207,6 +245,7 @@
             0,
             0,
             0});
+            this.numberBirthday.ValueChanged += new System.EventHandler(this.numberBirthday_ValueChanged);
             // 
             // label2
             // 
@@ -217,55 +256,14 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Number of People";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 108);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 13);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Cake Writing";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // birthdayCost
-            // 
-            this.birthdayCost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.birthdayCost.Location = new System.Drawing.Point(62, 154);
-            this.birthdayCost.Name = "birthdayCost";
-            this.birthdayCost.Size = new System.Drawing.Size(50, 23);
-            this.birthdayCost.TabIndex = 13;
-            this.birthdayCost.Text = "label4";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(23, 156);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(32, 13);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Cost";
-            // 
-            // tooLongLabel
-            // 
-            this.tooLongLabel.AutoSize = true;
-            this.tooLongLabel.BackColor = System.Drawing.Color.Red;
-            this.tooLongLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tooLongLabel.Location = new System.Drawing.Point(80, 108);
-            this.tooLongLabel.Name = "tooLongLabel";
-            this.tooLongLabel.Size = new System.Drawing.Size(61, 13);
-            this.tooLongLabel.TabIndex = 15;
-            this.tooLongLabel.Text = "Too Long";
-            this.tooLongLabel.Click += new System.EventHandler(this.tooLongLabel_Click);
-            // 
             // cakeWriting
             // 
-            this.cakeWriting.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cakeWriting.Location = new System.Drawing.Point(6, 123);
+            this.cakeWriting.Location = new System.Drawing.Point(6, 125);
             this.cakeWriting.Name = "cakeWriting";
-            this.cakeWriting.Size = new System.Drawing.Size(186, 19);
+            this.cakeWriting.Size = new System.Drawing.Size(189, 20);
             this.cakeWriting.TabIndex = 16;
             this.cakeWriting.Text = "Happy Birthday";
+            this.cakeWriting.TextChanged += new System.EventHandler(this.cakeWriting_TextChanged_1);
             // 
             // Form1
             // 
@@ -299,7 +297,6 @@
         private System.Windows.Forms.CheckBox fancyBox;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label cakeWriting;
         private System.Windows.Forms.Label tooLongLabel;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label birthdayCost;
@@ -307,6 +304,7 @@
         private System.Windows.Forms.CheckBox fancyBirthday;
         private System.Windows.Forms.NumericUpDown numberBirthday;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox cakeWriting;
     }
 }
 

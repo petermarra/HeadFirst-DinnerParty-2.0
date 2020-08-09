@@ -52,7 +52,7 @@ namespace DinnerParty2._0
             }
         }
 
-       private decimal Cost
+       public decimal Cost
         {
             get
             {
@@ -83,7 +83,7 @@ namespace DinnerParty2._0
             if (FancyDecorations)
                 costOfDecorations = (NumberOfPeople * 15.00M) + 50M;
             else
-                costOfDecorations = (NumberOfPeople + 7.50M) + 30M;
+                costOfDecorations = (NumberOfPeople * 7.50M) + 30M;
             return costOfDecorations;
         }
 
