@@ -6,17 +6,12 @@ using System.Threading.Tasks;
 
 namespace DinnerParty2._0
 {
-    class BirthdayParty
+    class BirthdayParty:Party
     {
-
-        public const int CostOfFoodPerPerson = 25; 
-
-        public int NumberOfPeople { get; set; }
-        public bool FancyDecorations { get; set; }
-
+         
         private string cakeWriting;
-        public string CakeWriting { 
-
+        public string CakeWriting
+        { 
             get 
             { 
                 return cakeWriting; 
@@ -24,7 +19,6 @@ namespace DinnerParty2._0
         set
             {
                 cakeWriting = value;
-
             }
         }
         public bool CakeWritingTooLong
@@ -42,22 +36,17 @@ namespace DinnerParty2._0
             get
             {
                 if (CakeWriting.Length > MaxWritingLength())
-                {
                     return MaxWritingLength();
-                }
                 else
-                {
                     return cakeWriting.Length;
-                }
             }
         }
 
-       public decimal Cost
+       public override decimal Cost
         {
             get
             {
-                decimal totalCost = CalculateCostOfDecorations();
-                totalCost += CostOfFoodPerPerson * NumberOfPeople;
+                decimal totalCost = base.Cost;
                 decimal cakeCost;
                 if (CakeSize() == 8)
                     cakeCost = 40M + ActualLength * .25M;
@@ -76,17 +65,7 @@ namespace DinnerParty2._0
             FancyDecorations = fancyDecorations;
             CakeWriting = cakeWriting;
         }
-       
-        private decimal CalculateCostOfDecorations()
-        {
-            decimal costOfDecorations;
-            if (FancyDecorations)
-                costOfDecorations = (NumberOfPeople * 15.00M) + 50M;
-            else
-                costOfDecorations = (NumberOfPeople * 7.50M) + 30M;
-            return costOfDecorations;
-        }
-
+    
         private int CakeSize()
         {
             if (NumberOfPeople <= 4)
